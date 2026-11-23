@@ -21,6 +21,8 @@ prix: 30, stock: 4 }
 
 // =========chalange 1 =============
 
+console.log("// =========chalange 1 =============")
+
 console.log(categories[0])
 console.log(categories.length)
 
@@ -33,6 +35,7 @@ categories.pop()
 console.log(categories)
 
 // =========chalange 2 ========
+console.log("// =========chalange 2 ========")
 
 console.log(boutique.nom)
 console.log(boutique.ville)
@@ -57,6 +60,7 @@ console.log(statut)
 
 
 //========= chalange 3 ==========
+console.log("//========= chalange 3 ==========")
 
 let produits_copier=[]
 
@@ -92,6 +96,7 @@ produits_copier.splice(sac,1)
 console.log(produits_copier)
 
 //============ chalange 4 =========
+console.log("//============ chalange 4 =========")
 
 
 
@@ -113,6 +118,7 @@ console.log(stickers)
 
 
 //==============chalange 6=======
+console.log("//==============chalange 6=======")
 
 let total = produits.reduce((sum, produit)=>sum +produit.stock,0)
 
@@ -125,6 +131,7 @@ console.log(totalprix +" DH")
 
 
 //========== chalange 7 ===========
+console.log("//========== chalange 7 ===========")
 
 
 let produitdomander= produits.find(produit=>produit.id ==103)
@@ -141,5 +148,37 @@ let produitdomander2index= produits.findIndex(produit=>produit.id ==999)
 console.log(produitdomander2index)
 
 
+
+//========== chalange 8 ===========
+console.log("//========== chalange 8 ===========")
+
+
+const verifierstok= produits.some(produit=>produit.stock==0)
+
+console.log(verifierstok)
+
+//========== chalange 9 ===========
+console.log("//========== chalange 9 ===========")
+
+const verifierprixs= produits.every(produit=>produit.prix>0)
+
+console.log(verifierprixs)
+
+const verifierstocks= produits.every(produit=>produit.stock>0)
+
+console.log(verifierstocks)
+
+//========== chalange 10 ===========
+console.log("//========== chalange 10 ===========")
+
+    const results = produits.filter(produit=>produit.stock>0 && produit.categorie==="Papeterie")
+    console.log(results)
+
+
+    const  nom_result = results.map(result=> result.nom)
+    console.log(nom_result)
+
+    const somme = results.reduce((sum,result)=>sum +result.prix*result.stock,0)
+    console.log(somme+" DH")
 
 
