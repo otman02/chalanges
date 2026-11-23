@@ -101,3 +101,12 @@ console.log(produitss)
 let produitsss= produits.filter(produit=>produit.stock>0 && produit.categorie==="Papeterie")
 console.log(produitsss)
 
+//============ chalange 5========
+
+let noms = produits.map(produit=> produit.nom )
+
+console.log(noms)
+
+let stickers = produits.map(produit=> `${produit.nom} - ${produit.prix} DH` )
+
+console.log(stickers)
