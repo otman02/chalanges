@@ -123,3 +123,23 @@ let totalprix = produits.reduce((sum, produit)=>sum +produit.stock*produit.prix,
 
 console.log(totalprix +" DH")
 
+
+//========== chalange 7 ===========
+
+
+let produitdomander= produits.find(produit=>produit.id ==103)
+console.log(produitdomander)
+
+let produitdomanderindex= produits.findIndex(produit=>produit.id ==103)
+console.log(produitdomanderindex)
+
+let produitdomander2= produits.find(produit=>produit.id ==999)
+console.log(produitdomander2)
+
+
+let produitdomander2index= produits.findIndex(produit=>produit.id ==999)
+console.log(produitdomander2index)
+
+
+
+
