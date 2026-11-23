@@ -50,10 +50,46 @@ let  statut;
 if (boutique.ouverte){
     statut="ouverte"
 }
-else{statut="Framée"}
+else{statut="Fermée"}
 
 
 console.log(statut)
+
+
+//========= chalange 3 ==========
+
+let produits_copier=[]
+
+for( let i=0 ;i<produits.length;i++){
+    produits_copier.push({...produits[i]})
+}
+
+
+produits_copier.forEach(produit=>{
+    console.log(`${produit.nom}\n ${produit.stock}`)
+})
+
+produits_copier.forEach(produit=>{
+
+    if (produit.nom==="Stylo"){
+
+        produit.stock=6
+    }
+})
+
+let gomme = { id: 106, nom: "Gomme", categorie: "Papeterie",
+prix: 5, stock: 8 }
+
+
+produits_copier.push(gomme)
+
+
+let sac = produits_copier.findIndex(produit=>produit.categorie==="Sacs")
+
+produits_copier.splice(sac,1)
+
+
+console.log(produits_copier)
 
 
 
