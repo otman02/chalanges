@@ -110,3 +110,16 @@ console.log(noms)
 let stickers = produits.map(produit=> `${produit.nom} - ${produit.prix} DH` )
 
 console.log(stickers)
+
+
+//==============chalange 6=======
+
+let total = produits.reduce((sum, produit)=>sum +produit.stock,0)
+
+console.log(total)
+
+
+let totalprix = produits.reduce((sum, produit)=>sum +produit.stock*produit.prix,0)
+
+console.log(totalprix +" DH")
+
