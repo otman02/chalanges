@@ -91,5 +91,13 @@ produits_copier.splice(sac,1)
 
 console.log(produits_copier)
 
+//============ chalange 4 =========
 
+
+
+let produitss= produits.filter(produit=>produit.stock>0)
+console.log(produitss)
+
+let produitsss= produits.filter(produit=>produit.stock>0 && produit.categorie==="Papeterie")
+console.log(produitsss)
 
